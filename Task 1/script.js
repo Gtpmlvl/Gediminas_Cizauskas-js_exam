@@ -13,7 +13,7 @@ console.log("script.js");
 
 const kgInput = document.getElementById("search");
 const formSubmit = document.getElementById("submit-btn");
-const rez = document.getElementById("output");
+const rezultP = document.getElementById("output");
 
 // formSubmit.addEventListener("click", (event) => {
 //   event.preventDefault();
@@ -31,17 +31,49 @@ const rez = document.getElementById("output");
 formSubmit.addEventListener("click", (event) => {
   event.preventDefault();
   kgToLb();
-});
-
-formSubmit.addEventListener("click", (event) => {
-  event.preventDefault();
   kgToG();
-});
-
-formSubmit.addEventListener("click", (event) => {
-  event.preventDefault();
   kgToOz();
 });
+
+function kgToLb() {
+  const newP = document.createElement("p");
+  const kgInput = document.getElementById("search").value.trim();
+  const lbRez = kgInput * 2.2046;
+  console.log("lbRez ===", lbRez);
+  newP.classList.add("results_style");
+  rezultP.appendChild(newP);
+  newP.textContent = `Svarai : ${lbRez}`;
+}
+
+function kgToG() {
+  const newP = document.createElement("p");
+  const kgInput = document.getElementById("search").value.trim();
+  const gRez = kgInput / 0.001;
+  console.log("gRez ===", gRez);
+  newP.classList.add("results_style");
+  rezultP.appendChild(newP);
+  newP.textContent = `Gramai : ${gRez}`;
+}
+
+function kgToOz() {
+  const newP = document.createElement("p");
+  const kgInput = document.getElementById("search").value.trim();
+  const ozRez = kgInput * 35.274;
+  console.log("ozRez ===", ozRez);
+  newP.classList.add("results_style");
+  rezultP.appendChild(newP);
+  newP.textContent = `Uncijos : ${ozRez}`;
+}
+
+// formSubmit.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   kgToG();
+// });
+
+// formSubmit.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   kgToOz();
+// });
 
 // function calcRez() {
 //   const newP = document.createElement("p");
@@ -49,20 +81,23 @@ formSubmit.addEventListener("click", (event) => {
 //   rez.appendChild(newP);
 // }
 
-function kgToLb() {
-  const kgInput = document.getElementById("search").value.trim();
-  const lbRez = kgInput * 2.2046;
-  console.log("lbRez ===", lbRez);
-}
+// function kgToLb() {
+//   const kgInput = document.getElementById("search").value.trim();
+//   const lbRez = kgInput * 2.2046;
+//   console.log("lbRez ===", lbRez);
+//   addRez();
+// }
 
-function kgToG() {
-  const kgInput = document.getElementById("search").value.trim();
-  const gRez = kgInput / 0.001;
-  console.log("gRez ===", gRez);
-}
+// function kgToG() {
+//   const kgInput = document.getElementById("search").value.trim();
+//   const gRez = kgInput / 0.001;
+//   console.log("gRez ===", gRez);
+//   addRez();
+// }
 
-function kgToOz() {
-  const kgInput = document.getElementById("search").value.trim();
-  const OzRez = kgInput * 35.274;
-  console.log("OzRez ===", OzRez);
-}
+// function kgToOz() {
+//   const kgInput = document.getElementById("search").value.trim();
+//   const OzRez = kgInput * 35.274;
+//   console.log("OzRez ===", OzRez);
+//   addRez();
+// }

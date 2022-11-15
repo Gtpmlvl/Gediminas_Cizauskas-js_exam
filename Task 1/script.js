@@ -8,6 +8,61 @@ pamatyti jo pateikto svorio kovertavimą į:
 Pastaba: rezultatas turi būti matomas pateikus formą ir atvaizduojamas
 <div id="output"></div> viduje. Gautus atsakymus stilizuokite naudojant CSS;
 ------------------------------------------------------------------- */
-// naujas
+"use strict";
+console.log("script.js");
 
-// naujas update
+const kgInput = document.getElementById("search");
+const formSubmit = document.getElementById("submit-btn");
+const rez = document.getElementById("output");
+
+// formSubmit.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   console.log("paspaudei");
+
+//   const kgInput = document.getElementById("search").value.trim();
+//   const kgToLb = kgInput * 2.2046;
+
+//   rez.append(kgToLb);
+
+//   console.log("kgToLb ===", kgToLb);
+//   calcRez(kgToLb);
+// });
+
+formSubmit.addEventListener("click", (event) => {
+  event.preventDefault();
+  kgToLb();
+});
+
+formSubmit.addEventListener("click", (event) => {
+  event.preventDefault();
+  kgToG();
+});
+
+formSubmit.addEventListener("click", (event) => {
+  event.preventDefault();
+  kgToOz();
+});
+
+// function calcRez() {
+//   const newP = document.createElement("p");
+//   newP.textContent = kgToLb;
+//   rez.appendChild(newP);
+// }
+
+function kgToLb() {
+  const kgInput = document.getElementById("search").value.trim();
+  const lbRez = kgInput * 2.2046;
+  console.log("lbRez ===", lbRez);
+}
+
+function kgToG() {
+  const kgInput = document.getElementById("search").value.trim();
+  const gRez = kgInput / 0.001;
+  console.log("gRez ===", gRez);
+}
+
+function kgToOz() {
+  const kgInput = document.getElementById("search").value.trim();
+  const OzRez = kgInput * 35.274;
+  console.log("OzRez ===", OzRez);
+}

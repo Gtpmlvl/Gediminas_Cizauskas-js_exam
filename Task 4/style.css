@@ -3,8 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 /* Mobile first */
@@ -21,9 +21,66 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 200px;
 }
 
 .container h1 {
   margin-top: 50px;
+  margin-bottom: 50px;
   color: #333;
+}
+
+.card--user {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid #000;
+  padding: 12px;
+
+  background-color: rgb(240, 239, 239);
+  box-shadow: 5px 10px #888888;
+}
+
+#output {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+h4 {
+  font-size: 12px;
+}
+
+h1 {
+  margin-bottom: 36px;
+  font-size: 48px;
+  color: rgb(41, 32, 32);
+}
+
+.small__heading {
+  font-size: 18px;
+}
+
+.models__heading {
+  color: rgb(24, 111, 187);
+}
+
+@media screen and (min-width: 350px) {
+  #output {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 758px) {
+  #output {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  #output {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

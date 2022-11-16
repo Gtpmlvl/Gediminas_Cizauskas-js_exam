@@ -17,17 +17,9 @@ addEventListener("load", (event) => {
   event.preventDefault();
   fetch(ENDPOINT)
     .then((res) => res.json())
-    .then(
-      (data) => {
-        // console.log(data[0]);
-        makeCardList(data);
-        // const one = makeCard(data[0]);
-        // document.body.append(one);
-      }
-      // data.forEach((post) => {
-      //   divCardEl.insertAdjacentHTML("beforeend", `<li>${post.brand}</li>`);
-      // });
-    );
+    .then((data) => {
+      makeCardList(data);
+    });
 });
 
 function makeCard(obj) {

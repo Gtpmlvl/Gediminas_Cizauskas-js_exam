@@ -27,10 +27,6 @@ function getUserAverageAge(arr) {
 }
 console.log(getUserAverageAge(users));
 
-// console.log(
-//   "filteredDogOwners",
-//   filterDogOwners.map(({ name }) => name)
-
 function getUsersNames(arr) {
   return arr.map(({ name }) => name);
 }

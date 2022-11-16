@@ -7,6 +7,8 @@ atveju grąžins "users", kurie turi augintinį.
 2. funkcija "filterAdults" - kaip argumentą priims masyvą ir duoto masyvo 
 atveju grąžins masyvą su "users", kurie yra pilnamečiai.
 -------------------------------------------------------------------------- */
+"use strict";
+console.log("script.js");
 
 const users = [
   { id: "1", name: "John Smith", age: 20, hasDog: true },
@@ -21,10 +23,6 @@ const users = [
 ];
 
 const filterDogOwners = users.filter((owner) => owner.hasDog === true);
-console.log(
-  "filteredDogOwners",
-  filterDogOwners.map(({ name }) => name)
-);
-
+console.log("filteredDogOwners ===", filterDogOwners);
 const filterAdults = users.filter((user) => user.age >= 18);
 console.log("filteredAdult ===", filterAdults);

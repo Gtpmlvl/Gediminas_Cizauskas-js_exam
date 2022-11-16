@@ -6,11 +6,6 @@ pusėje esančiame "state" skaičiavimo bloke (<div id="btn__state">0</div>)
 "use strict";
 console.log("script.js");
 
-// let clicks = 0;
-
-// function counter() {
-//   clicks += 1;
-// }
 const btnEl = document.getElementById("btn__element");
 const countRez = document.getElementById("btn__state");
 

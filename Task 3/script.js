@@ -15,33 +15,6 @@ console.log("script.js");
 const ENDPOINT = "https://api.github.com/users";
 const divElCards = document.getElementById("output");
 const showUsersBtn = document.getElementById("btn");
-// function getData(from) {
-//   return fetch(from)
-//     .then((resp) => resp.json())
-//     .then((data) => console.log("data ===", data[0].login))
-
-//     .catch((err) => console.warn("error in data", err));
-// }
-
-// // getData(ENDPOINT).then((data) => {
-// //   console.log("data ===", data);
-// // });
-// getData(ENDPOINT);
-
-// fetch(ENDPOINT)
-//   .then((res) => {
-//     return res.json();
-//   })
-//   .then((data) => {
-//     data.forEach((user) => {
-//       const markup = `<li>Login:${user.login} Avatar: ${user.avatar_url}</li>`;
-
-//       document.getElementById("output").insertAdjacentHTML("beforeend", markup);
-//     });
-//   })
-//   .catch((error) => console.warn(error));
-
-// //
 
 showUsersBtn.addEventListener("click", () => {
   console.log("click");
@@ -57,12 +30,6 @@ function getData(from) {
     .then((dataInJs) => dataInJs)
     .catch((err) => console.warn("klaida getData", err));
 }
-
-// getData(ENDPOINT).then((dataArr) => {
-//   // console.log("dataArr ===", dataArr[0]);
-
-//   makeCardList(dataArr);
-// });
 
 function makeCard(obj) {
   const divEl = document.createElement("div");
